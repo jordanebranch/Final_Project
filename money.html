@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<meta charset="UTF-8">
+<title>Money</title>
+</head>
+<script>
+$(function () {
+    $('#container').highcharts({
+        colors: ['#aaa','#ccc'],
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'PAC Contributions to Senators leading up to Manchin-Toomey Amendment'
+        },
+        subtitle: {
+            text: 'Source: <a href="https://www.opensecrets.org/news/issues/guns/vote_2013.php">Opensecrets.org</a>'
+        },
+        xAxis: {
+            categories: [
+                'Gun Control PAC',
+                'Gun Rights PAC'
+            ],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Total Money Contributed (K)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{#aaa};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>${point.y}K</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'No',
+            data: [527.97, 0]
+
+        }, {
+            name: 'Yes',
+            data: [68.33, 5]
+
+        }]
+    });
+});
+</script>
+<body>
+<div id="container" style="height: 400px; margin: 0 auto"></div>
+</body>
+</html>
