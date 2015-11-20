@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<meta charset="UTF-8">
+<title>Manchin-Toomey Vote</title>
+</head>
+<script>
+$(function () {
+    $('#container').highcharts({
+        colors: ['#aaa','#ccc'],
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Manchin-Toomey Amendment Senate <br> Voting Outcome'
+        },
+        subtitle: {
+            text: 'Source: <a href="https://www.opensecrets.org/news/issues/guns/vote_2013.php">Opensecrets.org</a>'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage} votes</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage} votes',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Votes',
+            colorByPoint: true,
+            data: [{
+                name: '<b>Oppose</b>',
+                y: 46
+            }, {
+                name: '<b>Support</b>',
+                y: 54
+            }]
+        }]
+    });
+});
+</script>
+<body>
+<div id="container" style="height: 400px; margin: 0 auto"></div>
+</body>
+</html>
