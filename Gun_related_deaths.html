@@ -9,11 +9,23 @@
 </head>
 <script>
 $(function () {
+  Highcharts.setOptions({
+    global: {
+      useUTC: false,
+    },
+    lang: {
+      decimalPoint: ',',
+      thousandsSep: ','
+    }
+  });
     $('#container').highcharts({
         colors: ['#910000'],
         title: {
             text: 'Number of Gun-Related Deaths in the United States, Yearly',
             x: -20 //center
+        },
+		    credits: {
+            text: 'Produced by: Jordan Branch',
         },
         subtitle: {
             text: 'Source: <a href="http://webappa.cdc.gov/sasweb/ncipc/mortrate10_us.html">Centers for Disease Control</a>',

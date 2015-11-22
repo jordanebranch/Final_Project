@@ -1,21 +1,46 @@
-.banner {
-	height: 700px;
-	margin: 0 auto;
-	display: block;
-	background: url("http://i666.photobucket.com/albums/vv28/jordanebranch/gun_zpstgfha2qm.jpg") no-repeat;
-  background-size: 970px;
-  background-position: center top;
+
+.banner2 {
+	height: 30vw;
+	background: url("http://i666.photobucket.com/albums/vv28/jordanebranch/Sandy%20Hook_zpszwkvkrp2.jpg") no-repeat;
+background-size: 100% auto;
   background-attachment: fixed;
+  margin-top: 6vw;
+  margin-bottom: 6vw;
+}
+
+.banner3 {
+	height: 30vw;
+	background: url("http://i666.photobucket.com/albums/vv28/jordanebranch/flags_zpspeca532o.jpg") no-repeat;
+background-size: 100% auto;
+  background-attachment: fixed;
+  margin-top: 6vw;
+  margin-bottom: 6vw;
 }
 
 p {
 	font-family: 'Lato', sans-serif;
-	font-size: 14.1px;
+	font-size: 1.3rem;
+	margin-bottom: 0;
 }
 
 iframe {
-	height: 600px;
+	height: 420px;
 	width: 970px;
+	 margin-top: 3vw;
+}
+
+.infogram iframe {
+	
+height: 390px;
+	width: 950px;
+	 margin-top: 3vw;
+	  margin-bottom: 3vw;
+}
+
+.timeline iframe{
+	height: 650px;
+	width: 950px;
+	margin-bottom: 3vw;
 }
 
 #content {
@@ -25,55 +50,35 @@ iframe {
 
 h1 {
 	font-family: 'Lato' ,serif;
-	font-size: 2.8rem;
+	font-size: 5rem;
 	text-align: center;
+	margin-bottom: 0;
+	margin-top: 1.5vw;
 }
 
-blockquote{
-	text-alignment: right;
-	font-size: 30px;
-	border-top: 20px;
-	margin: 1.5em 10px;
-	padding: .5em 10px;
-	float: left;
-	clear: both;
-	width: 500px;
+h3{
+	font-family: 'Lato' ,serif;
+	font-size: 2.5rem;
+	text-align: center;
+	margin-top: 0;
 }
-	
-
 
 /*Mobile - This affects screens that are up to 500px wide*/
-@media (max-width: 500px) {
-	.banner {
-		display: none;
+@media (max-width: 1100px) {
+	.banner{
+		width: 100%;
 	}
 	#content {
 		width: 100%;
 	}
-	.graphic iframe {
+	iframe {
 		width: 100%;
 	}
-	blockquote {
+	.timeline iframe{
 		width: 100%;
 	}
-}
-/*Tablet - This affects screens that are between 500 and 800px wide*/
-@media (min-width: 500px) and (max-width: 800px) {
-	.banner {
-		display: none;
-	}
-	#content {
-		width: 100%;
-}
-.graphic iframe {
-		width: 100%;
-	}
-	.caption {
-		width: 100%;
-	}
-	blockquote {
+	.infogram iframe{
 		width: 100%;
 	}
 }
-/* CSS Document */
 
