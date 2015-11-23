@@ -23,6 +23,7 @@ p {
 	margin-bottom: 0;
 }
 
+
 iframe {
 	height: 420px;
 	width: 970px;
@@ -56,11 +57,19 @@ h1 {
 	margin-top: 1.5vw;
 }
 
-h3{
+h2{
 	font-family: 'Lato' ,serif;
 	font-size: 2.5rem;
 	text-align: center;
 	margin-top: 0;
+}
+
+
+h3 {
+	font-family: 'Lato', sans-serif;
+	font-size: 0.9rem;
+	margin-bottom: 0;
+	text-align: center;
 }
 
 /*Mobile - This affects screens that are up to 500px wide*/
