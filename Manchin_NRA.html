@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<meta charset="UTF-8">
+<title>Manchin and NRA</title>
+</head>
+<script>
+$(function () {
+  Highcharts.setOptions({
+    global: {
+      useUTC: false,
+    },
+    lang: {
+      decimalPoint: ',',
+      thousandsSep: ','
+    }
+  });
+    $('#container').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Joe Manchin Election Cycle Campaign Contributions'
+        },
+        xAxis: {
+            categories: ['2010', '2012', '2014']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Total money spent on Manchin by top two gun control PACs'
+            }
+        },
+        legend: {
+            reversed: true
+        },
+        plotOptions: {
+            series: {
+                stacking: 'normal'
+            },
+          dataLabels:{
+            enabled: true
+          }
+        },
+        series: [{
+            name: 'Safari Club International',
+            data: [0, 5000, 1000]
+        }, {
+            name: 'National Rifle Association',
+            data: [4950, 6500, 0]
+        }]
+    });
+});
+</script>
+<body>
+<div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+</body>
+</html>
