@@ -17,26 +17,39 @@ $(function () {
         exporting: {
             enabled: false
         },
-		    credits: {
-            text: 'Produced by: Jordan Branch',
+		credits: {
+            enabled: false
         },
         title: {
             text: 'PAC Contributions to senators leading up to Manchin-Toomey Amendment (2007-March 2013)'
         },
         subtitle: {
-            text: 'Source: <a href="https://www.opensecrets.org/news/issues/guns/vote_2013.php">Opensecrets.org</a>'
+            text: 'Source: Opensecrets.org',
+			style: {
+                    fontSize:'.9rem'
+                }
         },
         xAxis: {
             categories: [
                 'Gun Rights PAC',
                 'Gun Control PAC',
             ],
-            crosshair: true
+            crosshair: true,
+			labels: {
+                style: {
+                    fontSize:'.8rem'
+                }
+            }
         },
         yAxis: {
             min: 0,
             title: {
                 text: 'Total Money Contributed (K)'
+            },
+			labels: {
+                style: {
+                    fontSize:'.8rem'
+                }
             }
         },
         tooltip: {
