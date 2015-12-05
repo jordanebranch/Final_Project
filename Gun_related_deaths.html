@@ -8,7 +8,16 @@
 <title>Gun-related deaths</title>
 </head>
 <script>
-$(function () {
+    $(function () {
+        Highcharts.setOptions({
+        global: {
+            useUTC: false,
+        },
+        lang: {
+            decimalPoint: ',',
+            thousandsSep: ','
+        }
+    });
     $('#container').highcharts({
         chart: {
             type: 'area'
