@@ -20,6 +20,7 @@ $(function () {
     }
   });
     $('#container').highcharts({
+		colors: ['#aaa','#ccc'],
         chart: {
             type: 'bar'
         },
@@ -29,8 +30,14 @@ $(function () {
 		credits:{
 			  enabled: false,
 		  },
+		  exporting: {
+            enabled: false
+        },
 		  subtitle: {
-            text: 'Source: <a href="http://www.fec.gov/">Federal Election Commission</a>'
+            text: 'Source: Federal Election Commission',
+			style: {
+                    fontSize:'.9rem'
+                }
         },
         xAxis: {
             categories: ['2010', '2012', '2014'],
@@ -47,7 +54,7 @@ $(function () {
             },
 			labels: {
                 style: {
-                    fontSize:'.9rem'
+                    fontSize:'.8rem'
                 }
             }
         },
