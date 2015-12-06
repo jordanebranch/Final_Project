@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="UTF-8">
+<title>Cornyn and NRA</title>
+</head>
+<script>
+$(function () {
+        Highcharts.setOptions({
+        global: {
+            useUTC: false,
+        },
+        lang: {
+            decimalPoint: '.',
+            thousandsSep: ','
+        }
+    });
+  
+    // Create the chart
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+      colors: ['#aaa','#ccc', 'yellow'],
+        title: {
+            text: 'Money spent by the NRA on campaigns and candidates'
+        },
+      credits:{
+        enabled: false
+      },
+        subtitle: {
+            text: 'Click the columns to view breakdown. Source: Federal Election Commission'
+        },
+        xAxis: {
+            type: 'category'
+        },
+        yAxis: {
+            title: {
+                text: 'Total dollars spent'
+            }
+
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                borderWidth: 0,
+                dataLabels: {
+                    enabled: true,
+                    format: '${point.y:,3f}'
+                }
+            }
+        },
+
+        tooltip: {
+            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>${point.y}</b> of total<br/>'
+        },
+
+        series: [{
+            name: 'Total',
+            colorByPoint: true,
+            data: [{
+                name: '2010',
+                y: 8628227,
+                drilldown: '2010'
+            }, {
+                name: '2012',
+                y: 12362681,
+                drilldown: '2012'
+            }, {
+                name: '2014',
+                y: 15338434,
+                drilldown: '2014'
+            }]
+        }],
+        drilldown: {
+          drillUpButton: {
+					relativeTo: 'spacingBox',
+                position: {
+                    y: 0,
+                    x: 0
+                },
+                theme: {
+                    fill: 'white',
+                    'stroke-width': 1,
+                    stroke: 'silver',
+                    states: {
+                        hover: {
+                            fill: '#ccc',
+                          color: 'white'
+                        },
+                        select: {
+                            stroke: '#039',
+                            fill: '#bada55'
+                        }
+                    }
+                }
+
+            },
+            series: [{
+                name: '2010',
+                id: '2010',
+                data: [
+                    [
+                        'Contributions to Committees',
+                        1465500
+                    ],
+                    [
+                        'Independent Expenditures',
+                        71662727
+                    ]
+                ]
+            }, {
+                name: '2012',
+                id: '2012',
+                data: [
+                    [
+                        'Contributions to Committees',
+                        1203188
+                    ],
+                    [
+                        'Independent Expenditures',
+                        1465500
+                    ]
+                  ]
+            }, {
+                name: '2014',
+                id: '2014',
+                data: [
+                    [
+                        'Contributions to Committees',
+                        988750
+                    ],
+                    [
+                        'Independent Expenditures',
+                        14349684
+                    ]
+                ]
+            }]
+        }
+    });
+});
+</script>
+<body>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+</body>
+</html>
+
