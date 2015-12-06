@@ -44,7 +44,7 @@ p {
     display: flex;
   text-wrap: none;
   padding: 0;
-  margin-bottom: 5vw;
+  margin-bottom: 0vw;
   float: left;
   width: 50%;
 
@@ -53,7 +53,7 @@ p {
 iframe {
 	height: 420px;
 	width: 970px;
-	 margin-top: 3vw;
+	 margin-top: 2vw;
 }
 
 .infogram iframe {
