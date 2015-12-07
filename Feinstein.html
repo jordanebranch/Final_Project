@@ -54,7 +54,12 @@ $(function () {
     },
 	colors: ['#b3b3b3','#737373', '#404040'],
         tooltip: {
-            pointFormat: '<strong>{series.name}: <b>{point.y}</b></strong>'
+            headerFormat: '',
+            pointFormat: '<strong><b>{point.y}</b></strong> Votes',
+            
+            style: { 
+                "fontSize": "1.0rem",
+            },
         },
         plotOptions: {
             pie: {

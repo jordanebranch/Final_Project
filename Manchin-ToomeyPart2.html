@@ -54,7 +54,12 @@ $(function () {
             enabled: false
         },
         tooltip: {
-            pointFormat: '<strong>{series.name}: <b>{point.y}</b></strong>'
+            headerFormat: '',
+            pointFormat: '<strong><b>{point.y}</b></strong> Votes',
+            
+            style: { 
+                "fontSize": "1.0rem",
+            },
         },
         plotOptions: {
             pie: {
