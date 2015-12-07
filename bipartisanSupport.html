@@ -19,7 +19,10 @@ $(function () {
             enabled: false
         },
         title: {
-            text: 'Citizen Bipartisan Support of Gun Proposals in 2013'
+            text: 'Citizen Bipartisan Support of Gun Proposals in 2013',
+            style: {
+                fontSize:'1.5rem',
+            },
         },
 		    credits: {
             enabled: false,
@@ -27,35 +30,46 @@ $(function () {
         subtitle: {
             text: 'Source: Pew Research',
 			style: {
-                    fontSize:'.9rem'
+                    fontSize:'1.2rem'
                 }
         },
         xAxis: {
-            categories: ['Background checks', 'Prevent mentally ill from purchasing guns', 'Federal database to track gun sales', 'Ban on assault-style weapons'],
+            categories: ['Background checks', 'Prevent mentally ill from buying', 'Federal database to track gun sales', 'Ban on assault-style weapons'],
             title: {
                 text: null
             },
 			labels: {
                 style: {
-                    fontSize:'.9rem'
-                }
-            }
+                    fontSize:'1.1rem'
+                },
+            },
+
         },
         yAxis: {
             min: 0,
             title: {
-                text: 'Support (percent)',
-                align: 'high'
+                text: '',
+                align: 'high',
+                style: {
+                    fontSize:'0.8rem'
+                },
             },
             labels: {
                 overflow: 'justify',
                 style: {
-                    fontSize:'.9rem'
-                }
-            }
+                    fontSize:'1.1rem'
+                },
+                format:'{value}%',
+            },
+
         },
         tooltip: {
-            valueSuffix: '%'
+            valueSuffix: '%',
+            pointFormat: '<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b>',
+            headerFormat: '',
+            style: {
+                fontSize:'1.1rem',
+            },
         },
         plotOptions: {
             bar: {
@@ -73,14 +87,19 @@ $(function () {
             floating: false,
             borderWidth: 1,
             backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-            shadow: true
+            shadow: true,
+            itemStyle: {
+                fontSize:'1.0rem'
+            },
+
         },
         credits: {
             enabled: false
         },
         series: [{
             name: 'Democrat',
-            data: [88, 79, 85, 70]
+            data: [88, 79, 85, 70],
+
         }, {
             name: 'Republican',
             data: [79, 81, 55, 48]

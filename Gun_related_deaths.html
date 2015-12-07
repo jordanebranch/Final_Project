@@ -27,6 +27,9 @@
         },
         title: {
             text: 'Number of Gun-Related Deaths in the United States, Yearly',
+            style: {
+                fontSize:'1.5rem',
+            }
         },
         credits: {
             enabled: false
@@ -34,14 +37,14 @@
         subtitle: {
             text: 'Source: Centers for Disease Control',
 			style: {
-                    fontSize:'.9rem'
+                    fontSize:'1.2rem'
                 }
         },
         xAxis: {
             categories: ['1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013'],
 			labels: {
                 style: {
-                    fontSize:'.9rem'
+                    fontSize:'1.1rem'
                 }
             }
         },
@@ -49,7 +52,7 @@
             title: {
                 text: 'Number of gun-related deaths',
 				style: {
-                    fontSize:'.9rem'
+                    fontSize:'1.1rem'
                 }
             },
             labels: {
@@ -57,12 +60,17 @@
                     return this.value / 1000 + 'k';
                 },
 				style: {
-                    fontSize:'.9rem'
+                    fontSize:'1.1rem'
                 }
             }
         },
         tooltip: {
-            pointFormat: '<strong><b>{point.y:,.0f}</b><br/>gun-related deaths in {point.x}</strong>'
+            headerFormat: '',
+            pointFormat: '<strong><b>{point.y:,.0f}</b> gun-related deaths in <b>{point.x}</b></strong>',
+
+            style: { 
+                "fontSize": "1.1rem",
+            },
         },
         legend: {
             enabled:false,

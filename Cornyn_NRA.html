@@ -25,7 +25,10 @@ $(function () {
             type: 'bar'
         },
         title: {
-            text: 'Sen. John Cornyn Election Cycle Campaign Contributions from Gun Rights PACs'
+            text: 'Sen. John Cornyn Election Cycle Campaign Contributions from Gun Rights PACs',
+            style: {
+                fontSize:'1.5rem',
+            },
         },
 		credits:{
 			  enabled: false,
@@ -70,6 +73,10 @@ $(function () {
 			color: "black",
 		  }
             },
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+            pointFormat: '<span style="color:{point.color}">{point.name}</span> <b>${point.y}</b> of total<br/>'
         },
         series: [{
             name: 'Safari Club International',
