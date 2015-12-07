@@ -34,15 +34,28 @@ $(function () {
         enabled: false
       },
         subtitle: {
-            text: 'Click the columns to view breakdown. Source: Federal Election Commission'
+            text: 'Click the columns to view breakdown. Source: Federal Election Commission',
+				style: {
+                    fontSize:'.9rem'
+			}
         },
         xAxis: {
-            type: 'category'
+            type: 'category',
+			labels:{
+				style: {
+                    fontSize:'.9rem'
+                }
+			}
         },
         yAxis: {
             title: {
                 text: 'Total dollars spent'
-            }
+            },
+			labels:{
+				style: {
+                    fontSize:'.9rem'
+                }
+			}
 
         },
         legend: {
@@ -53,7 +66,10 @@ $(function () {
                 borderWidth: 0,
                 dataLabels: {
                     enabled: true,
-                    format: '${point.y:,3f}'
+                    format: '${point.y:,3f}',
+					style: {
+                    fontSize:'.9rem'
+                }
                 }
             }
         },
