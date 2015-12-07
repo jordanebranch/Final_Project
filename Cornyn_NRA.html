@@ -27,7 +27,7 @@ $(function () {
         title: {
             text: 'Sen. John Cornyn Election Cycle Campaign Contributions from Gun Rights PACs',
             style: {
-                fontSize:'1.5rem',
+                fontSize:'1.3rem',
             },
         },
 		credits:{
@@ -39,14 +39,14 @@ $(function () {
 		  subtitle: {
             text: 'Source: Federal Election Commission',
 			style: {
-                    fontSize:'.9rem'
+                    fontSize:'1.2rem'
                 }
         },
         xAxis: {
             categories: ['2010', '2012', '2014'],
 			labels: {
                 style: {
-                    fontSize:'.9rem'
+                    fontSize:'1.1rem'
                 }
             }
         },
@@ -54,16 +54,22 @@ $(function () {
             min: 0,
             title: {
                 text: 'Total money spent on Cornyn by top two gun rights PACs',
+                style: {
+                    fontSize:'1.0rem'
+                }
             },
 			labels: {
                 style: {
-                    fontSize:'.8rem'
+                    fontSize:'1.0rem'
                 },
 				format: '${value:,.0f}'
             }
         },
         legend: {
             reversed: true,
+            itemStyle: {
+                fontSize:'1.1rem',
+            }
         },
         plotOptions: {
             series: {
@@ -75,8 +81,11 @@ $(function () {
             },
         },
         tooltip: {
-            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-            pointFormat: '<span style="color:{point.color}">{point.name}</span> <b>${point.y}</b> of total<br/>'
+            headerFormat: '<span style="font-size:1.1rem">{series.name}</span><br>',
+            pointFormat: '<span style="color:{point.color}">{point.name}</span> <b>${point.y}</b> of total',
+            style: {
+                fontSize:'1.1rem',
+            },
         },
         series: [{
             name: 'Safari Club International',
