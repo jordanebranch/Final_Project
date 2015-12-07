@@ -34,12 +34,20 @@ $(function () {
         enabled: false
       },
         subtitle: {
-            text: 'Click the columns to view breakdown. Source: Federal Election Commission',
+            text: 'Source: Federal Election Commission',
 				style: {
                     fontSize:'.9rem'
 			}
         },
         xAxis: {
+            title:{
+                text: 'Click the columns to view breakdown.',
+                style: {
+                    width: '450px',
+                    color: '#000000',
+                    fontSize:'16px'
+                }
+            },
             type: 'category',
 			labels:{
 				style: {
