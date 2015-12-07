@@ -13,7 +13,32 @@ $(function () {
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: 0,
-            plotShadow: false
+            plotShadow: false,
+            events: {
+                    load: function () {
+                        var label = this.renderer.label("60 votes needed to pass the Amendment")
+                        .css({
+                            width: '450px',
+                            color: '#222',
+                            fontSize: '16px'
+                        })
+                        .attr({
+                            'stroke': 'silver',
+                            'stroke-width': 2,
+                            'r': 5,
+                            'padding': 10
+                        })
+                        .add();
+                
+                        label.align(Highcharts.extend(label.getBBox(), {
+                            align: 'center',
+                            x: 0, // offset
+                            verticalAlign: 'bottom',
+                            y: -20 // offset
+                        }), null, 'spacingBox');
+                
+                    }
+                },
         },
         title: {
             text: 'Manchin Toomey Gun Control Amendment Second Vote',
