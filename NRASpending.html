@@ -28,7 +28,10 @@ $(function () {
         },
       colors: ['#b3b3b3','#737373', '#404040'],
         title: {
-            text: 'Money spent by the NRA on campaigns and candidates'
+            text: 'Money spent by the NRA on campaigns and candidates',
+			style: {
+				fontSize:'1.3rem',
+			},
         },
       credits:{
         enabled: false
@@ -45,7 +48,7 @@ $(function () {
                 style: {
                     width: '450px',
                     color: '#000000',
-                    fontSize:'22px',
+                    fontSize:'.9rem',
                 }
             },
             type: 'category',
@@ -62,7 +65,11 @@ $(function () {
                     fontSize:'.9rem'
                 }
             },
-
+			labels:{
+			style: {
+                    fontSize:'.9rem'
+                },
+			}
         },
         legend: {
             enabled: false
