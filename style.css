@@ -98,6 +98,15 @@ h3 {
 	text-align: center;
 }
 
+h6 {
+	font-family: 'Lato', sans-serif;
+	font-size: 0.9rem;
+	margin-bottom: 2rem;
+	text-align: center;
+	color: #635F5F;
+	margin-top: 0;
+}
+
 blockquote {
 	text-alignment: right;
 	font-family: 'Lato', sans-serif;
