@@ -163,7 +163,7 @@ blockquote {
 	margin: 2rem;
 }
 /*Mobile - This affects screens that are up to 500px wide*/
-@media (max-width: 900px) {
+@media (max-width: 925px) {
 	.banner{
 		width: 100%;
 	}
