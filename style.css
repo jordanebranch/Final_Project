@@ -159,6 +159,9 @@ blockquote {
 	font-family: 'Bold Lato', sans-serif;
 }
 
+.flexMargin{
+	margin: 2rem;
+}
 /*Mobile - This affects screens that are up to 500px wide*/
 @media (max-width: 900px) {
 	.banner{
