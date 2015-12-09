@@ -25,22 +25,36 @@ $(function () {
             text: 'Number of Gun-Related Deaths in the United States, Yearly'
         },
         subtitle: {
-            text: 'Source: Centers for Disease Control'
+            text: 'Source: Centers for Disease Control',
+			style: {
+                    fontSize:'1rem'
+                }
         },
         xAxis: {
             categories: ['1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013'],
             tickmarkPlacement: 'on',
             title: {
                 enabled: false
-            }
+            },
+			labels: {
+				style: {
+					fontSize: '1rem'
+				}
+			}
         },
         yAxis: {
             title: {
-                text: 'Number of deaths per million population'
+                text: 'Number of deaths per million population',
+				style: {
+                    fontSize:'1rem'
+                }
             },
             labels: {
                 formatter: function () {
                     return this.value;
+                },
+				style: {
+                    fontSize:'1rem'
                 }
             }
         },
