@@ -15,24 +15,6 @@ background-size: 100% auto;
   margin-bottom: 6vw;
 }
 
-.banner3 {
-	height: 30vw;
-	background: url("http://i666.photobucket.com/albums/vv28/jordanebranch/flags_zpspeca532o.jpg") no-repeat;
-background-size: 100% auto;
-  background-attachment: fixed;
-  margin-top: 6vw;
-  margin-bottom: 6vw;
-}
-
-.banner4 {
-	height: 30vw;
-	background: url("http://i666.photobucket.com/albums/vv28/jordanebranch/Bernadino%20shooting_zpsak1flc5i.jpg") no-repeat;
-background-size: 100% auto;
-  background-attachment: fixed;
-  margin-top: 6vw;
-  margin-bottom: 6vw;
-}
-
 p {
 	font-family: 'Lato', sans-serif;
 	font-size: 1.1rem;
@@ -61,14 +43,6 @@ iframe {
 	height: 420px;
 	width: 970px;
 	 margin-top: 2vw;
-}
-
-.infogram iframe {
-	
-height: 390px;
-	width: 950px;
-	 margin-top: 3vw;
-	  margin-bottom: 3vw;
 }
 
 .timeline iframe{
